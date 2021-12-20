@@ -4,7 +4,7 @@ pipeline {
 
    stages {
    
-     stage('Install Dependencies') { 
+     stage('Install Dependencies in dev environment') { 
         steps { 
            sh 'npm install' 
         }
@@ -12,13 +12,13 @@ pipeline {
      
      stage('Test') { 
         steps { 
-           sh 'echo "testing application..."'
+           sh 'echo "testing application in dev environment..."'
         }
       }
 
          stage("Deploy nodejs application") { 
          steps { 
-           sh 'echo "deploying application..."'
+           sh 'echo "deploying application in dev environment..."'
          }
 
      }
